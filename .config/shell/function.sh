@@ -5,9 +5,9 @@ function mnt_d {
 	sudo mount -t drvfs D: /mnt/d
 }
 
-cd() {
-	z $1 && eza --color=always --icons=always
-}
+#cd() {
+#	z $1 && eza --color=always --icons=always
+#}
 
 fvim() {
 	nvim $(fzf --preview='cat {}')
