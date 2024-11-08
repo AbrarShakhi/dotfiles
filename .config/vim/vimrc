@@ -1,7 +1,9 @@
-" general settings
 
 let mapleader = " "
-
+set nobackup
+set nowritebackup
+set updatetime=300
+set signcolumn=yes
 set title
 set path+=**
 set nocompatible
@@ -12,9 +14,8 @@ set smartindent
 set showcmd
 set showmode
 syntax on
-set number
 set relativenumber
-set wrap
+set nowrap
 set ignorecase
 set smartcase
 set incsearch
@@ -31,36 +32,35 @@ set laststatus=2
 set ruler
 set incsearch
 set shellslash
-
-"set cino+=L0
+set viminfofile=~/.cache/viminfo
+set backspace=indent,eol,start
+" set cino+=L0
 filetype indent on
 filetype off
 setlocal indentkeys-=:
 
-"remap split navigation to just CTRL + hjkl
+" remap split navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"adjust split sizes easier
+" adjust split sizes easier
 noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize -3<CR>
 noremap <silent> <C-Down> :resize +3<CR>
 
-"open terminal inside vim
+" open terminal inside vim
 map <leader>tt :vnew term://bash<CR>
 
-"open vifm
+" open vifm
 nnoremap <leader>vs :Vsplit Vifm<CR>
 
-"remap ESC to various keys
+" remap ESC to various keys
 :imap Capslock <Esc>
-:imap jk <Esc>
-:imap kj <Esc>
 
-"remove trailing whitespace on save
+" remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " automatically close brackets, parethesis, double quotes, and single quotes
@@ -72,45 +72,51 @@ inoremap { {}<left>
 inoremap {; {};<left><left>
 inoremap /* /**/<left><left>
 
-"change split windows from vertical to horizontal or vice versa
+" change split windows from vertical to horizontal or vice versa
 map <leader>th <C-w>t<C-w>H
 map <leader>tk <C-w>t<C-w>K
 
-"keybindings for { completion, "jk" for escape, ctrl-a to select all
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {}     {}
-"imap jk         <Esc>
+" keybindings for { ctrl-a to select all
 map <C-a> <esc>ggVG<CR>
 set belloff=all
 
-"Append template to new C++ files
-"autocmd BufNewFile *.cpp 0r /home/jayleeds/vimcp/Library/Template.cpp
+" Append template to new C++ files
+" autocmd BufNewFile *.cpp 0r tep.cpp
 
 
-"Compile and run
-"Note that the next uncommented line requires the build.sh script!
-"Replace it with the commented line below if you don't have it
-"set makeprg=g++\ -static\ -DDEBUG\ -lm\ -s\ -x\ c++\ -Wall\ -Wextra\ -O2\ -std=c++17\ -o\ %:r\ %
-"set makeprg=build.sh\ %:r
-"autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR>
-"autocmd filetype cpp nnoremap <F9> :w <bar> !build.sh %:r <CR>
-"autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=40 ./%:r<CR>
-"autocmd filetype cpp nnoremap <F11> :!./%:r<CR>
-"autocmd filetype java nnoremap <F9> :w <bar> !javac %<CR>
-"autocmd filetype java nnoremap <F10> :vertical terminal ++shell ++cols=40 java %:r<CR>
-"autocmd filetype java nnoremap <F11> :!java %:r<CR>
+" Compile and run
+" Note that the next uncommented line requires the build.sh script!
+" Replace it with the commented line below if you don't have it
+" set makeprg=g++\ -static\ -DDEBUG\ -lm\ -s\ -x\ c++\ -Wall\ -Wextra\ -O2\ -std=c++17\ -o\ %:r\ %
+" set makeprg=build.sh\ %:r
+" autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR>
+" autocmd filetype cpp nnoremap <F9> :w <bar> !build.sh %:r <CR>
+" autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=40 ./%:r<CR>
+" autocmd filetype cpp nnoremap <F11> :!./%:r<CR>
+" autocmd filetype java nnoremap <F9> :w <bar> !javac %<CR>
+" autocmd filetype java nnoremap <F10> :vertical terminal ++shell ++cols=40 java %:r<CR>
+" autocmd filetype java nnoremap <F11> :!java %:r<CR>
 
-"LaTeX settings
+" LaTeX settings
 autocmd FileType tex :NoMatchParen
 autocmd FileType tex :set tw=110
 
-"Plugin setup
-"call plug#begin()
-"Plug 'lervag/vimtex'
-"Plug 'octol/vim-cpp-enhanced-highlight'
-"Plug 'tpope/vim-dispatch'
-"Plug 'vim-scripts/errormarker.vim'
-"call plug#end()
+" Plugin setup
+call plug#begin()
+    Plug 'tpope/vim-sensible'
+    Plug 'lervag/vimtex'
+    Plug 'octol/vim-cpp-enhanced-highlight'
+    let g:cpp_class_scope_highlight = 1
+    let g:cpp_member_variable_highlight = 1
+    let g:cpp_class_decl_highlight = 1
+    let g:cpp_posix_standard = 1
+    let g:cpp_experimental_simple_template_highlight = 1
+    let g:cpp_experimental_template_highlight = 1
+    let g:cpp_concepts_highlight = 1
+    " let c_no_curly_error=1
+    " Plug 'tpope/vim-dispatch'
+    " Plug 'vim-scripts/errormarker.vim'
+call plug#end()
 
 filetype plugin indent on
 let g:vimtex_view_general_viewer = 'SumatraPDF'
@@ -120,32 +126,3 @@ let g:tex_flavor = 'latex'
 let g:vimtex_motion_matchparen = 0
 let g:vimtex_fold_manual = 1
 let g:vimtex_matchparen_enabled = 0
-
-"Clipboard configuration
-let s:clip = 'c:/Windows/System32/clip.exe'  " change this path according to your mount point
-if executable(s:clip)
-        augroup WSLYank
-                    autocmd!
-                            autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-                                augroup END
-                            endif
-
-        au BufNewFile,BufRead *.tex
-            \ set nocursorline |
-            \ set nornu |
-            \ set number |
-            \ let g:loaded_matchparen=1 |
-
-
-""execute pathogen#infect()
-if &term =~ "xterm\\|rxvt"
-  " use an orange cursor in insert mode
-  let &t_SI = "\<Esc>]12;orange\x7"
-  " use a red cursor otherwise
-  let &t_EI = "\<Esc>]12;red\x7"
-  silent !echo -ne "\033]12;red\007"
-  " reset cursor when vim exits
-  autocmd VimLeave * silent !echo -ne "\033]112\007"
-  " use \003]12;gray\007 for gnome-terminal and rxvt up to version 9.21
-endif
-

@@ -20,7 +20,7 @@ color_prompt=
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;34m\]\w\[\033[00m\] :: '
+    PS1=':: \[\033[01;34m\]\w\[\033[00m\] % '
 else
     PS1='\u@\h:\w\$ '
 fi

@@ -50,7 +50,8 @@ CXX=g++
 DEFINE=AbrarShakhi
 COMMON="-Wshadow -Wall -Wextra -Wno-unused-result -std=c++17"
 
-DBG_FLAG="-g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG"
+# -fsanitize=address -fsanitize=undefined
+DBG_FLAG="-g -D_GLIBCXX_DEBUG"
 OPTIMIZE_FLAG="-s -O3"
 
 if [ -n "$dbg" ]; then

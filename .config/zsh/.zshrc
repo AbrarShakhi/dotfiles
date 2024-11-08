@@ -8,7 +8,7 @@ SAVEHIST="$HISTSIZE"
 HISTFILE="$HOME/.cache/.cmd_hist"                    		# zsh_history, bash_history to cache
 
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} ::%b "
+PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %%b "
 
 
 setopt autocd
