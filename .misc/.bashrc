@@ -41,7 +41,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $USER    :$fg[white]"
+
+export SUDO_PROMPT="[sudo] password for $USER    :"
 #HISTCONTROL=ignoreboth
 #HISTFILESIZE=$HISTSIZE
 shopt -s checkwinsize
