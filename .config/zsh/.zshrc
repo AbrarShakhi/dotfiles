@@ -8,7 +8,7 @@ SAVEHIST="$HISTSIZE"
 HISTFILE="$HOME/.cache/.cmd_hist"                    		# zsh_history, bash_history to cache
 
 autoload -U colors && colors
-PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %%b "
+PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %b "
 
 
 setopt autocd
@@ -39,8 +39,7 @@ pk() {
 alias -s c=nvim
 alias -s cpp=nvim
 alias -s txt=vim
-alias -s sh=nvim
-alias -s py=nvim
+alias -s py=python3
 
 # source bash_aliases file
 [ -e ~/.misc/.bash_aliases ] && source ~/.misc/.bash_aliases
