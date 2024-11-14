@@ -17,7 +17,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # include ~/bin, ~/.local/bin, MSYS2:ucrt64/bin
 
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
-# [ -d "${HOME}/.local/bin" ] && PATH="${HOME}/.local/bin:${PATH}"
+[ -d "${HOME}/.local/bin" ] && PATH="${HOME}/.local/bin:${PATH}"
 [ -d "${HOME}/bin" ] && PATH="${HOME}/bin:${PATH}"
 
 # if running bash
