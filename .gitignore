@@ -11,12 +11,16 @@ Videos
 
 **.o
 **.obj
+**/**.o
+**/**.obj
 
-**/lazy-lock.json
+**/.bash_history
+.zcompcache
+**/.zcompcache
+.zcompdump
 **/.zcompdump
 **/.zsh_history
-**/.bash_history
-**/.zcompcache
+.zsh_history
 
+.netrwhist
 **/.netrwhist
-**/.config/vim/plugged
