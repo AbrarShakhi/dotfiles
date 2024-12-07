@@ -46,7 +46,7 @@ return {
         vim.keymap.set(nvx_modes, '<leader>;', builtin.builtin, { desc = 'search Telescope command' })
         vim.keymap.set(nvx_modes, "<leader>'", builtin.oldfiles, { desc = 'search Recent Files' })
         vim.keymap.set(nvx_modes, '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-        vim.keymap.set(nvx_modes, '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+        vim.keymap.set(nvx_modes, '<leader>km', builtin.keymaps, { desc = 'search [K]ey[M]aps' })
         vim.keymap.set(nvx_modes, '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 
         vim.keymap.set(nvx_modes, '<leader>sc', function()

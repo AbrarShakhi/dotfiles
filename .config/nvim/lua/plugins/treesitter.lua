@@ -6,18 +6,7 @@ return {
     },
     build = ':TSUpdate',
     opts = {
-      ensure_installed = {
-        'c',
-        'cpp',
-        'python',
-        'rust',
-        'java',
-        'vim',
-        'lua',
-        'bash',
-        'html',
-        'markdown',
-      },
+      ensure_installed = {'c', 'cpp', 'python', 'rust', 'go', 'java', 'vim', 'lua', 'bash', 'html', 'markdown'},
       auto_install = false,
       highlight = {
         enable = true,
