@@ -38,6 +38,8 @@ set backspace=indent,eol,start
 filetype indent on
 filetype off
 setlocal indentkeys-=:
+colorscheme habamax
+
 
 " remap split navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
@@ -106,7 +108,6 @@ call plug#begin()
     Plug 'tpope/vim-sensible'
     Plug 'lervag/vimtex'
     Plug 'octol/vim-cpp-enhanced-highlight'
-    Plug 'catppuccin/vim', { 'as': 'catppuccin' }
     let g:cpp_class_scope_highlight = 1
     let g:cpp_member_variable_highlight = 1
     let g:cpp_class_decl_highlight = 1
@@ -128,4 +129,3 @@ let g:vimtex_motion_matchparen = 0
 let g:vimtex_fold_manual = 1
 let g:vimtex_matchparen_enabled = 0
 
-colorscheme catppuccin_mocha
