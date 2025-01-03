@@ -1,5 +1,5 @@
-require "config.plugman"
-require "config.options"
-require "config.keymaps"
-require "config.autocmds"
-require "cp"
+require("config.plugman")
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
+require("cp")

@@ -1,3 +1,4 @@
 --ignore=.stowrc
 --ignore=.gitignore
 --ignore=.gitmodules
+--ignore=.gitmodules
