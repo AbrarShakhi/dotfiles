@@ -8,15 +8,6 @@ exec docker exec -it oracle-xe-11g bash
 # sqlplus msabr/1234@//localhost:1521/XE
 
 
-
-
-
-
-
-
-
-
-
 # docker system prune -a (prune all)
 
 # running the oracle-xe-11g

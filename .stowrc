@@ -1,4 +1,4 @@
 --ignore=.stowrc
 --ignore=.gitignore
 --ignore=.gitmodules
---ignore=.gitmodules
+--ignore=init.sh
