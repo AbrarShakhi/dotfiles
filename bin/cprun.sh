@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function throw_err {
+throw_err() {
 	echo "Usage: [NAME] [FILE] [OPTION]"
 	echo "    [FILE]:   A C++ file name without '.cpp' extention."
 	echo "    [OPTION]: Use -d Compile with debugging information"

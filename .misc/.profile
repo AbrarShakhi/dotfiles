@@ -1,5 +1,7 @@
 
-export XDG_CONFIG_HOME="$HOME/.config"                      # set HOME
+export XDG_CONFIG_HOME="$HOME/.config"                      # set config HOME
+export XDG_DATA_HOME="$HOME/.local/share"                   # set data HOME
+
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"                       # set zsh dot dir
 export EDITOR="nvim"                                        # editor to nvim
 export KEYTIMEOUT=1
@@ -17,7 +19,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # include ~/bin, ~/.local/bin, MSYS2:ucrt64/bin
 
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
-[ -d "${HOME}/.local/bin" ] && PATH="${HOME}/.local/bin:${PATH}"
+[ -d "${XDG_DATA_HOME}/bin" ] && PATH="${XDG_DATA_HOME}/bin:${PATH}"
 [ -d "${HOME}/bin" ] && PATH="${HOME}/bin:${PATH}"
 
 # if running bash

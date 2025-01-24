@@ -1,40 +1,38 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# [ -e $XDG_CONFIG_HOME/zsh/.zprofile ] && source $XDG_CONFIG_HOME/zsh/.zprofile
 
 [[ "$-" != *i* ]] && return
 
 HISTSIZE=1024                                        		# max history to 1024
 SAVEHIST="$HISTSIZE"
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 HISTFILE="$HOME/.cache/.cmd_hist"                    		# zsh_history, bash_history to cache
 
 autoload -U colors && colors
-PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %b "
+autoload -U compinit && compinit
 
-
-setopt autocd
-setopt interactive_comments
-
-setopt INC_APPEND_HISTORY
-
+# PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %b "
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $USER    :$fg[white]"
 
-autoload -U compinit
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
-
-bindkey -v
-
-echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
-pk() {
-  pgrep -i "$1" | sudo xargs kill -9
-}
+pk() { pgrep -i "$1" | sudo xargs kill -9 ;}
 
-
+bindkey -e
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-fordward
 
 alias -s c=nvim
 alias -s cpp=nvim
@@ -43,4 +41,3 @@ alias -s py=python3
 
 # source bash_aliases file
 [ -e ~/.misc/.bash_aliases ] && source ~/.misc/.bash_aliases
-
