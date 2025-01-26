@@ -53,7 +53,7 @@
       "unlocked": ""
     }
   },
-  "sway/mode": {
+  "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
   },
   "sway/scratchpad": {
