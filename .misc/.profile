@@ -17,15 +17,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # umask 077
 
 # include ~/bin, ~/.local/bin, MSYS2:ucrt64/bin
-
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
 [ -d "${XDG_DATA_HOME}/bin" ] && PATH="${XDG_DATA_HOME}/bin:${PATH}"
 [ -d "${HOME}/bin" ] && PATH="${HOME}/bin:${PATH}"
-
-# if running bash
-if [ -n "${BASH_VERSION}" ]; then
-    [ -e "${HOME}/.misc/.bashrc" ] && source "${HOME}/.misc/.bashrc"
-fi
 
 # Set MANPATH so it includes users' private man if it exists
 # if [ -d "${HOME}/man" ]; then
@@ -37,4 +31,19 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-[ -e "${HOME}/.misc/plugins.sh" ] && source "${HOME}/.misc/plugins.sh"
+# source bash_aliases file
+[ -e ~/.misc/.bash_aliases ] && source ~/.misc/.bash_aliases
+[ -e "${HOME}/.misc/plugins.sh" ] && . "${HOME}/.misc/plugins.sh"
+
+# if running bash
+if [ -n "${BASH_VERSION}" ]; then
+    export IM_BASHRC
+    [ -e "${HOME}/.misc/.bashrc" ] && . "${HOME}/.misc/.bashrc"
+
+
+elif [ -n "${ZSH_VERSION}" ]; then
+    export IM_ZSHRC
+    [ -e "${ZDOTDIR}/.zshrc" ] && . "${ZDOTDIR}/.zshrc"
+    
+    export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $fg[green]$USER    :$fg[white]"
+fi

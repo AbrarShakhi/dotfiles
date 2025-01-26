@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 
 [[ "$-" != *i* ]] && return
 
@@ -22,13 +15,12 @@ HISTFILE="$HOME/.cache/.cmd_hist"                    		# zsh_history, bash_histo
 autoload -U colors && colors
 autoload -U compinit && compinit
 
-# PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %b "
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
-export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $USER    :$fg[white]"
+PS1=":: %{$fg[yellow]%}[%{$reset_color%} %{$fg[green]%}%1~%{$reset_color%} %{$fg[yellow]%}]%{$reset_color%} %b "
+if command -v starship > /dev/null; then
+    eval "$(starship init zsh)"
+fi
 
-preexec() { echo -ne '\e[5 q' ;}
-
-pk() { pgrep -i "$1" | sudo xargs kill -9 ;}
+export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $fg[green]$USER    :$fg[white]"
 
 bindkey -e
 bindkey '^p' history-search-backward
@@ -38,6 +30,3 @@ alias -s c=nvim
 alias -s cpp=nvim
 alias -s txt=vim
 alias -s py=python3
-
-# source bash_aliases file
-[ -e ~/.misc/.bash_aliases ] && source ~/.misc/.bash_aliases
