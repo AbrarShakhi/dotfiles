@@ -102,4 +102,4 @@ cd_func () {
     return 0
 }
 # 
-# alias cd=cd_func
+alias cd=cd_func
