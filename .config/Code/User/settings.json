@@ -15,4 +15,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "editor.minimap.autohide": true,
+    "editor.minimap.renderCharacters": false,
 }

@@ -2,7 +2,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"                      # set config HOME
 export XDG_DATA_HOME="$HOME/.local/share"                   # set data HOME
 
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"                       # set zsh dot dir
+export ZDOTDIR="$HOME/.misc"                                # set zsh dot dir
 export EDITOR="nvim"                                        # editor to nvim
 export KEYTIMEOUT=1
 
@@ -32,18 +32,16 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # fi
 
 # source bash_aliases file
-[ -e ~/.misc/.bash_aliases ] && source ~/.misc/.bash_aliases
-[ -e "${HOME}/.misc/plugins.sh" ] && . "${HOME}/.misc/plugins.sh"
+[ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
+[ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
 
 # if running bash
 if [ -n "${BASH_VERSION}" ]; then
     export IM_BASHRC
-    [ -e "${HOME}/.misc/.bashrc" ] && . "${HOME}/.misc/.bashrc"
-
+    [ -e "${ZDOTDIR}/.bashrc" ] && . "${ZDOTDIR}/.bashrc"
 
 elif [ -n "${ZSH_VERSION}" ]; then
     export IM_ZSHRC
     [ -e "${ZDOTDIR}/.zshrc" ] && . "${ZDOTDIR}/.zshrc"
-    
-    export SUDO_PROMPT="$fg[red][sudo] $fg[yellow]password for $fg[green]$USER    :$fg[white]"
+
 fi
