@@ -30,7 +30,7 @@ files=(
     *.hxx
     *.py
     *.go
-    *.go
+    *.rs
     *.java
     src/**
 )
