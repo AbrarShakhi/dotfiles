@@ -31,8 +31,8 @@ if [ -d $SDKMAN_DIR ]; then
 fi
 
 # Rustup
-export RUSTUP_HOME=$DOT_PLUGIN_HOME
-export CARGO_HOME=$DOT_PLUGIN_HOME
+export RUSTUP_HOME="$DOT_PLUGIN_HOME/rustup"
+export CARGO_HOME="$DOT_PLUGIN_HOME/cargo"
 if [ -d $CARGO_HOME ]; then
 . "$CARGO_HOME/env"
 fi
