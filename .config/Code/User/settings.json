@@ -17,4 +17,5 @@
     },
     "editor.minimap.autohide": true,
     "editor.minimap.renderCharacters": false,
+    "files.autoSave": "onFocusChange",
 }
