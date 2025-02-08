@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create sourcable/required directory if not exists 
-[ ! -d ~/.local/libs ] && mkdir -p ~/.local/libs
+[ ! -d ~/.local/apps ] && mkdir -p ~/.local/apps
 [ ! -d ~/.local/share/bin ] && mkdir -p ~/.local/share/bin
 [ ! -d ~/.cache ] && mkdir -p ~/.cache
 

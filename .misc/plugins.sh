@@ -1,5 +1,5 @@
 
-DOT_PLUGIN_HOME="$HOME/.local/libs"
+DOT_PLUGIN_HOME="$HOME/.local/apps"
 
 # Homebrew
 BREW_DIR="/home/linuxbrew/.linuxbrew"
