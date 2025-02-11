@@ -22,11 +22,15 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.minimap.autohide": true,
   "editor.minimap.renderCharacters": false,
   "files.autoSave": "onFocusChange",
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
-  ]
+  ],
+  "rust-analyzer.semanticHighlighting.nonStandardTokens": false
 }
