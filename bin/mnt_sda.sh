@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LOCA="/run/media/$USER/"
+LOCA="/run/media/$USER"
 
 # Check if USER is set, $1 is provided, and the directory $LOCA exists
 if [ -n "$USER" ] && [ -n "$1" ] && [ -d "$LOCA" ] && [ ! -d "$LOCA/$1" ]; then

@@ -32,5 +32,11 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
-  "rust-analyzer.semanticHighlighting.nonStandardTokens": false
+  "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons"
 }
