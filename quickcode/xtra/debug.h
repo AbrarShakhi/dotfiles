@@ -1,38 +1,61 @@
 #pragma once
 
-void REDIRECT_IO(const char *a) {}
 
 #ifndef _MSC_VER
 
 #include <iostream>
 #include <string>
 
-void __debug_debug_print(int x) { std::cerr << x; }
+void __debug_debug_print(int x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(long x) { std::cerr << x; }
-void __debug_debug_print(long long x) { std::cerr << x; }
+void __debug_debug_print(long x) {
+	std::cerr << x;
+}
+void __debug_debug_print(long long x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(unsigned x) { std::cerr << x; }
+void __debug_debug_print(unsigned x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(unsigned long x) { std::cerr << x; }
+void __debug_debug_print(unsigned long x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(unsigned long long x) { std::cerr << x; }
+void __debug_debug_print(unsigned long long x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(float x) { std::cerr << x; }
+void __debug_debug_print(float x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(double x) { std::cerr << x; }
+void __debug_debug_print(double x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(long double x) { std::cerr << x; }
+void __debug_debug_print(long double x) {
+	std::cerr << x;
+}
 
-void __debug_debug_print(char x) { std::cerr << '\'' << x << '\''; }
+void __debug_debug_print(char x) {
+	std::cerr << '\'' << x << '\'';
+}
 
-void __debug_debug_print(const char *x) { std::cerr << '\"' << x << '\"'; }
+void __debug_debug_print(const char *x) {
+	std::cerr << '\"' << x << '\"';
+}
 
 void __debug_debug_print(const std::string &x) {
 	std::cerr << '\"' << x << '\"';
 }
 
-void __debug_debug_print(bool x) { std::cerr << (x ? "true" : "false"); }
+void __debug_debug_print(bool x) {
+	std::cerr << (x ? "true" : "false");
+}
 
 template <typename T, typename V>
 void __debug_debug_print(const std::pair<T, V> &x);
@@ -41,7 +64,8 @@ template <typename T>
 void __debug_debug_print(const T &x) {
 	int f = 0;
 	std::cerr << '{';
-	for (auto &i : x) std::cerr << (f++ ? ", " : ""), __debug_debug_print(i);
+	for (auto &i : x)
+		std::cerr << (f++ ? ", " : ""), __debug_debug_print(i);
 	std::cerr << "}";
 }
 
@@ -53,12 +77,15 @@ void __debug_debug_print(const std::pair<T, V> &x) {
 	__debug_debug_print(x.second);
 	std::cerr << '}';
 }
-void _debug_print() { std::cerr << "]\n"; }
+void _debug_print() {
+	std::cerr << "]\n";
+}
 
 template <typename T, typename... V>
 void _debug_print(T t, V... v) {
 	__debug_debug_print(t);
-	if (sizeof...(v)) std::cerr << ", ";
+	if (sizeof...(v))
+		std::cerr << ", ";
 	_debug_print(v...);
 }
 
@@ -70,4 +97,4 @@ void _debug_print(T t, V... v) {
 
 #else
 #define DB(...)
-#endif  // _MSC_VER
+#endif // _MSC_VER

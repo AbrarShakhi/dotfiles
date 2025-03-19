@@ -7,9 +7,13 @@
 class Timer {
 	std::chrono::time_point<std::chrono::high_resolution_clock> m_Start;
 
-   public:
-	Timer() { reset(); }
-	void reset() { m_Start = std::chrono::high_resolution_clock::now(); }
+public:
+	Timer() {
+		reset();
+	}
+	void reset() {
+		m_Start = std::chrono::high_resolution_clock::now();
+	}
 	float elapsed() const {
 		return std::chrono::duration_cast<std::chrono::microseconds>(
 		           std::chrono::high_resolution_clock::now() - m_Start)
@@ -28,9 +32,10 @@ class ScopedTimer {
 	Timer m_Timer;
 	std::string m_Name;
 
-   public:
+public:
 	ScopedTimer(std::string name)
-	    : m_Name(name) { /*std::cout << "\033[1;32m--------\033[0m\n";*/ }
+	    : m_Name(name) { /*std::cout << "\033[1;32m--------\033[0m\n";*/
+	}
 	~ScopedTimer() {
 		float time = m_Timer.elapsedMillis();
 		std::cout << "\033[1;32m[ " << m_Name << ": " << time
@@ -41,10 +46,13 @@ class ScopedTimer {
 class ManualTimer {
 	Timer timer;
 
-   public:
-	void start() { timer.reset(); }
-	float stopElapsedMillis() { return timer.elapsedMillis(); }
+public:
+	void start() {
+		timer.reset();
+	}
+	float stopElapsedMillis() {
+		return timer.elapsedMillis();
+	}
 };
 
-#define TOTAL_TIMER ScopedTimer total_time("Total Time")
-#define TESTCASE_TIMER ScopedTimer testcase_time("Testcase Time")
+ScopedTimer total_time("Total Time");

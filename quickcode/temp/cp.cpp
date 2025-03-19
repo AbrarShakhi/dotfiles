@@ -1,28 +1,24 @@
-#ifdef AbrarShakhi
-#include "../xtra/debug.h"
-#include "../xtra/timer.h"
+
+#if defined(AbrarShakhi) && !defined(_MSC_VER)
+#include "xtra/debug.h"
+#include "xtra/stdc++.h"
+#include "xtra/timer.h"
 #else
 #pragma GCC optimize("O3")
+#include <bits/stdc++.h>
 #define DB(...)
-#define TOTAL_TIMER
-#define TESTCASE_TIMER
-#define REDIRECT_IO(...)
-#endif  // AbrarShakhi
+#endif // AbrarShakhi && !_MSC_VER
 
-#include <cstdint>
-#include <iostream>
-#include <string>
-#include <vector>
 
 #define N 0x7FFFFFF
 
-inline static auto solve() {}
+inline static auto solve() {
+}
 
 int main() {
 	std::cin.tie(0)->sync_with_stdio(0);
 	std::cin.exceptions(std::cin.failbit);
-	TOTAL_TIMER;
-	REDIRECT_IO("input.txt");
+
 	uint32_t T = 1;
 	std::cin >> T;
 	for (uint32_t t = 1; t <= T; t++) {

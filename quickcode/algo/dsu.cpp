@@ -1,30 +1,43 @@
 #include <unordered_map>
 
-template <typename T>
+template <typename T = int>
 class Dsu {
-	std::unordered_map<T, T> boss;
-	std::unordered_map<T, size_t> size;
+	T *boss = nullptr;
+	size_t *size = nullptr;
 
-   public:
-	void make_set(T item) {
-		boss[item] = item;
-		size[item] = 1;
+public:
+	Dsu(int p_capacity) {
+		boss = new T[p_capacity];
 	}
-	T find_set(T item) {
-		if (boss[item] == item) return item;
-		return boss[item] = find_set(boss[item]);
+	~Dsu() {
+		if (boss)
+			delete boss;
+		if (size)
+			delete size;
 	}
-	void union_set(T item1, T item2) {
-		item1 = find_set(item1);
-		item2 = find_set(item2);
-		if (item2 != item1) {
-			if (size[item1] < size[item2]) {
-				boss[item1] = item2;
-				size[item2] += size[item1];
+	inline void make_set(T i) {
+		boss[i] = i;
+		size[i] = 1;
+	}
+	inline T find_set(T i) {
+		if (boss[i] == i)
+			return i;
+		return boss[i] = find_set(boss[i]);
+	}
+	inline bool union_set(T a, T b) {
+		a = find_set(a);
+		b = find_set(b);
+		if (b != a) {
+			if (size[a] < size[b]) {
+				boss[a] = b;
+				size[b] += size[a];
 			} else {
-				boss[item2] = item1;
-				size[item1] += size[item2];
+				boss[b] = a;
+				size[a] += size[b];
 			}
+			return true;
+		} else {
+			return false;
 		}
 	}
 };
