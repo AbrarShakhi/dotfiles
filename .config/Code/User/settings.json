@@ -6,6 +6,13 @@
   "editor.tabSize": 4,
   "editor.indentSize": "tabSize",
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.minimap.autohide": true,
+  "editor.minimap.renderCharacters": false,
+  "files.autoSave": "onFocusChange",
+  "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -23,17 +30,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.minimap.autohide": true,
-  "editor.minimap.renderCharacters": false,
-  "files.autoSave": "onFocusChange",
-  "cmake.pinnedCommands": [
-    "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask"
-  ],
-  "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
-  "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.sideBar.location": "right",
