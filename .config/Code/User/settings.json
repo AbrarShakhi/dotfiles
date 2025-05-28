@@ -32,7 +32,15 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.sideBar.location": "right",
   "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons"
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "file:/**/*.csv": "jupyter-data-wrangler"
+  },
+  "workbench.sideBar.location": "right",
+  "dineug.erd-editor.theme.appearance": "dark",
+  "dineug.erd-editor.theme.grayColor": "sand",
+  "dineug.erd-editor.theme.accentColor": "crimson",
+  "git.confirmSync": false
 }
