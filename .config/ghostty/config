@@ -17,7 +17,7 @@ copy-on-select = true
 background-opacity = 0.7
 
 # Font and cursor settings
-# font-family = VictorMono Nerd Font
+font-family = VictorMono Nerd Font
 font-size = 14
 cursor-style = block
 
