@@ -13,16 +13,39 @@ return {
     end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      window = {
+        backdrop = 0.95,
+			  width = 1, -- width of the Zen window
+			  height = 1, -- height of the Zen window
+			  options = {
+				  number = true,
+				  relativenumber = true, -- disable relative numbers
+			  },
+		  },
+	  },
+	  config = function()
+		  vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>")
+	  end,
+  },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  -- test new blink
+  { import = "nvchad.blink.lazyspec" },
+
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+        "vim", "lua", "vimdoc",
+        "html", "css",
+        "javascript", "typescript",
+        "c", "cpp",
+        "python",
+        "java",
+        "rust"
+  		},
+  	},
+  },
 }
