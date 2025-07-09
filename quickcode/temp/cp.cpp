@@ -1,5 +1,4 @@
-
-#if defined(AbrarShakhi) && !defined(_MSC_VER)
+#if defined(AbrarShakhi) && defined(_MSC_VER)
 #include "xtra/debug.h"
 #include "xtra/stdc++.h"
 #include "xtra/timer.h"
@@ -7,8 +6,7 @@
 #pragma GCC optimize("O3")
 #include <bits/stdc++.h>
 #define DB(...)
-#endif // AbrarShakhi && !_MSC_VER
-
+#endif // AbrarShakhi && _MSC_VER
 
 #define N 0x7FFFFFF
 

@@ -1,0 +1,76 @@
+/* Catppuccin Macchiato-inspired Waybar style */
+window#waybar {
+    background: transparent;
+    border: none;
+    color: #cad3f5;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 13px;
+    margin: 2px 16px 0 16px;
+    box-shadow: none;
+}
+
+/* Module spacing, padding, border, and background */
+#workspaces, #clock, #battery, #network, #bluetooth, #pulseaudio, #tray {
+    padding: 2px 6px;
+    margin: 0 2px;
+    border-radius: 8px;
+    background: #1e2030;
+    border: 2px solid #8aadf4;
+}
+
+/* Workspace buttons - show all, style all */
+#workspaces button {
+    color: #cad3f5;
+    background: transparent;
+    border-radius: 999px;
+    margin: 0 2px;
+    padding: 0px 6px;
+    font-weight: 500;
+    min-width: 10px;
+    font-size: 12px;
+    transition: background 0.2s, color 0.2s;
+}
+#workspaces button.active {
+    background: #8aadf4;
+    color: #24273a;
+    font-weight: bold;
+    border-radius: 999px;
+    padding: 0px 6px;
+    min-width: 10px;
+    font-size: 12px;
+}
+#workspaces button.urgent {
+    background: #ed8796;
+    color: #24273a;
+}
+#workspaces button:hover {
+    background: #a6da95;
+    color: #24273a;
+}
+
+/* Hover effect for modules */
+#clock:hover, #battery:hover, #network:hover, #bluetooth:hover, #pulseaudio:hover {
+    background: #a6da95;
+    color: #24273a;
+}
+
+/* Battery low */
+#battery.critical {
+    background: #ed8796;
+    color: #fff;
+}
+
+/* Tray icons */
+#tray {
+    background: transparent;
+    padding-right: 0;
+    border: none;
+}
+
+/* Remove border for center clock */
+#clock {
+    background: #1e2030;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
