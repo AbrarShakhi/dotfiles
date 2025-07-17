@@ -60,13 +60,6 @@ window#waybar {
     color: #fff;
 }
 
-/* Tray icons */
-#tray {
-    background: transparent;
-    padding-right: 0;
-    border: none;
-}
-
 /* Remove border for center clock */
 #clock {
     background: #1e2030;

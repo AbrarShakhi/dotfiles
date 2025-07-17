@@ -4,6 +4,7 @@
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "custom/separator",
     "battery",
     "network",
     "bluetooth",
@@ -11,37 +12,62 @@
     "tray"
   ],
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon} {name}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
     "on-click": "activate",
     "all-outputs": true,
-    "persistent-workspaces": [1,2,3,4,5,6,7,8,9,10]
+    "persistent-workspaces": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "custom/separator": {
+    "format": " | ",
+    "tooltip": false
   },
   "clock": {
-    "format": "{:%a %d %b  %H:%M}",
+    "format": "{:%H:%M | %a,%d-%b}",
     "tooltip-format": "{:%A, %d %B %Y | %H:%M:%S}",
     "interval": 1
   },
   "battery": {
-    "format": "  {capacity}%",
+    "format": " {capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "interval": 30
+    "format-plugged": " {capacity}%",
+    "interval": 30,
+    "on-click": "xfce4-power-manager-settings"
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "  {ifname}",
-    "format-disconnected": "  Disconnected"
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "",
+    "on-click": "nm-connection-editor"
   },
   "bluetooth": {
-    "format": "  {status}",
-    "format-disabled": "  Off"
+    "format": "",
+    "format-connected": "",
+    "format-disabled": "󰂲",
+    "format-disconnected": "",
+    "on-click": "blueman-manager"
   },
   "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": "  Muted"
+    "format": " {volume}%",
+    "format-muted": " 0%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
   "tray": {
-    "icon-size": 18,
+    "icon-size": 14,
     "spacing": 8
   }
 }
