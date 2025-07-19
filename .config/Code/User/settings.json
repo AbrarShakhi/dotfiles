@@ -45,5 +45,8 @@
   "dineug.erd-editor.theme.appearance": "dark",
   "dineug.erd-editor.theme.grayColor": "sand",
   "dineug.erd-editor.theme.accentColor": "crimson",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.diagnosticsSource": "Pyright"
 }

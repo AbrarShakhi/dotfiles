@@ -74,9 +74,9 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": "Power Menu",
-    "on-click": "",
-    "on-click-right": "",
-    "on-scroll-up": "",
-    "on-scroll-down": ""
+    "on-click": "ghostty -e ~/bin/sys-down.sh"
+    // "on-click-right": "",
+    // "on-scroll-up": "",
+    // "on-scroll-down": ""
   }
 }
