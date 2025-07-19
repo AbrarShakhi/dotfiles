@@ -44,3 +44,5 @@ elif [ -n "${ZSH_VERSION}" ]; then
     export IM_ZSHRC
     [ -e "${ZDOTDIR}/.zshrc" ] && . "${ZDOTDIR}/.zshrc"
 fi
+
+eval "$(ssh-agent -s)" > /dev/null
