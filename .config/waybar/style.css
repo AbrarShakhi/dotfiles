@@ -67,3 +67,20 @@ window#waybar {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+#custom-power {
+    background: #ed8796;
+    color: #333438;
+    border-radius: 8px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 2px solid #8aadf4;
+    transition: background 0.2s, color 0.2s;
+}
+#custom-power:hover {
+    background: #a6da95;
+    color: #24273a;
+    border-color: #a6da95;
+}

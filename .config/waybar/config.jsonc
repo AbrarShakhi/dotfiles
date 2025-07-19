@@ -9,7 +9,8 @@
     "network",
     "bluetooth",
     "pulseaudio",
-    "tray"
+    "tray",
+    "custom/power"
   ],
   "hyprland/workspaces": {
     "format": "{icon} {name}",
@@ -69,5 +70,13 @@
   "tray": {
     "icon-size": 14,
     "spacing": 8
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Power Menu",
+    "on-click": "",
+    "on-click-right": "",
+    "on-scroll-up": "",
+    "on-scroll-down": ""
   }
 }

@@ -43,5 +43,4 @@ if [ -n "${BASH_VERSION}" ]; then
 elif [ -n "${ZSH_VERSION}" ]; then
     export IM_ZSHRC
     [ -e "${ZDOTDIR}/.zshrc" ] && . "${ZDOTDIR}/.zshrc"
-
 fi
