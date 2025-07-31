@@ -1,13 +1,13 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 10;
   min-height: 0;
   font-family: JetBrainsMono Nerd Font;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 window#waybar {
-  background-color: #181825;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -36,14 +36,14 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #1e1e2e;
-  background-color: #cdd6f4;
+  background-color: #cef4cd;
 }
 
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
   color: #1e1e2e;
-  background-color: #cdd6f4;
+  background-color: #aaafbd;
 }
 
 #workspaces button.urgent {

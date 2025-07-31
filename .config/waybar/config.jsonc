@@ -38,12 +38,13 @@
       "active": "󱓻",
       "urgent": "󱓻"
     },
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
       "4": [],
-      "5": []
+      "5": [],
+      "6": []
     }
   },
   "memory": {
