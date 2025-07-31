@@ -48,5 +48,13 @@
   "git.confirmSync": false,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.diagnosticsSource": "Pyright"
+  "python.analysis.diagnosticsSource": "Pyright",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.aiCodeActions": {
+    "implementAbstractClasses": true
+  },
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.languageServerMode": "full",
+  "python.analysis.typeCheckingMode": "standard"
 }
