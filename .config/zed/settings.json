@@ -16,8 +16,7 @@
   "buffer_font_size": 16,
   "autosave": "on_focus_change",
   "theme": {
-    "mode": "system",
-    "light": "One Light",
+    "mode": "dark",
     "dark": "Catppuccin Macchiato"
   },
   "ui_font_family": "Fira Code",

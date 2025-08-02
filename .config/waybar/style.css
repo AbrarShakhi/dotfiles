@@ -37,6 +37,8 @@ window#waybar.hidden {
 #workspaces button.active {
   color: #1e1e2e;
   background-color: #cef4cd;
+  padding: 6px 28px;
+  font-size: 14px;
 }
 
 #workspaces button:hover {
@@ -67,15 +69,6 @@ window#waybar.hidden {
 
 #custom-power {
   margin-right: 6px;
-}
-
-#custom-logo {
-  padding-right: 7px;
-  padding-left: 7px;
-  margin-left: 5px;
-  font-size: 15px;
-  border-radius: 8px 0px 0px 8px;
-  color: #1793d1;
 }
 
 #memory {
@@ -118,6 +111,126 @@ window#waybar.hidden {
 
 #custom-power {
   background-color: #f2cdcd;
+}
+
+#cpu {
+  background-color: #f9e2af;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#temperature {
+  background-color: #f9e2af;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#disk {
+  background-color: #b894e2;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#bluetooth {
+  background-color: #cba6f7;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#pulseaudio {
+  background-color: #f9e2af;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#idle_inhibitor {
+  background-color: #f2cdcd;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#privacy {
+  background-color: #fab387;
+  color: #181825;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#user {
+  background-color: #cba6f7;
+  color: #1e1e2e;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#group {
+  background-color: #f9e2af;
+  color: #1e1e2e;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#hostname {
+  background-color: #94e2d5;
+  color: #1e1e2e;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#window {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#scratchpad {
+  background-color: #f2cdcd;
+  color: #cba6f7;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#custom-weather {
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#custom-pacman {
+  background-color: #fab387;
+  color: #1e1e2e;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+}
+
+#custom-notification {
+  background-color: #f9e2af;
+  color: #131822;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
 }
 
 tooltip {
