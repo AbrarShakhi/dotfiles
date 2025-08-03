@@ -17,7 +17,8 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "dark",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Macchiato",
+    "light": "Ayu Light"
   },
   "ui_font_family": "Fira Code",
   "buffer_font_family": "VictorMono Nerd Font"

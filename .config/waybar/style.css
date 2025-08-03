@@ -1,9 +1,11 @@
 * {
   border: none;
-  border-radius: 10;
+  border-radius: 10px;
   min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
+  font-family: JetBrainsMono Nerd Font Props;
   font-size: 11px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 window#waybar {
@@ -22,36 +24,46 @@ window#waybar.hidden {
 
 #workspaces button {
   all: initial;
-  /* Remove GTK theme values (waybar #1351) */
   min-width: 0;
-  /* Fix weird spacing in materia (waybar #450) */
   box-shadow: inset 0 -3px transparent;
-  /* Use box-shadow instead of border so the text isn't offset */
-  padding: 6px 18px;
-  margin: 6px 3px;
-  border-radius: 4px;
   background-color: #1e1e2e;
   color: #cdd6f4;
+  padding: 6px 15px;
+  margin: 6px 3px;
+  border-radius: 4px;
+  padding-right: 17px;
+  transition: background-color 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    padding 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
+#workspaces button:hover,
 #workspaces button.active {
   color: #1e1e2e;
   background-color: #cef4cd;
-  padding: 6px 28px;
+  padding: 6px 25px;
   font-size: 14px;
+  box-shadow: 0 4px 16px 0 rgba(206, 244, 205, 0.3);
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
   color: #1e1e2e;
   background-color: #aaafbd;
 }
 
 #workspaces button.urgent {
   background-color: #f38ba8;
+  color: #181825;
+  padding: 6px 12px;
 }
 
+#custom-notification,
+#custom-pacman,
+#custom-weather,
+#scratchpad,
+#window,
+#hostname,
 #memory,
 #custom-power,
 #battery,
@@ -59,24 +71,40 @@ window#waybar.hidden {
 #wireplumber,
 #network,
 #clock,
+#cpu,
+#temperature,
+#disk,
+#bluetooth,
+#group,
+#privacy,
+#idle_inhibitor,
+#pulseaudio,
+#user,
 #tray {
+  background-color: #1e1e2e;
+  color: #181825;
   border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #1e1e2e;
-  color: #181825;
 }
 
-#custom-power {
-  margin-right: 6px;
+#custom-notification,
+#custom-power,
+#bluetooth,
+#idle_inhibitor,
+#wireplumber,
+#pulseaudio {
+  padding-right: 15px;
 }
 
 #memory {
   background-color: #fab387;
+  color: #181825;
 }
 
 #battery {
   background-color: #f38ba8;
+  color: #181825;
 }
 
 #battery.warning,
@@ -93,150 +121,105 @@ window#waybar.hidden {
 
 #backlight {
   background-color: #fab387;
+  color: #181825;
 }
 
 #wireplumber {
   background-color: #f9e2af;
+  color: #181825;
 }
 
 #network {
   background-color: #94e2d5;
-  padding-right: 17px;
+  color: #181825;
 }
 
 #clock {
-  font-family: JetBrainsMono Nerd Font;
   background-color: #cba6f7;
+  color: #181825;
 }
 
 #custom-power {
   background-color: #f2cdcd;
+  color: #181825;
 }
 
 #cpu {
   background-color: #f9e2af;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #temperature {
   background-color: #f9e2af;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #disk {
   background-color: #b894e2;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #bluetooth {
   background-color: #cba6f7;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #pulseaudio {
   background-color: #f9e2af;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #idle_inhibitor {
   background-color: #f2cdcd;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #privacy {
   background-color: #fab387;
   color: #181825;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
-
 #user {
   background-color: #cba6f7;
   color: #1e1e2e;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #group {
   background-color: #f9e2af;
   color: #1e1e2e;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #hostname {
   background-color: #94e2d5;
   color: #1e1e2e;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #window {
   background-color: #1e1e2e;
   color: #cdd6f4;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #scratchpad {
   background-color: #f2cdcd;
   color: #cba6f7;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #custom-weather {
   background-color: #a6e3a1;
-  color: #1e1e2e;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #custom-pacman {
   background-color: #fab387;
-  color: #1e1e2e;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 #custom-notification {
   background-color: #f9e2af;
-  color: #131822;
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
 }
 
 tooltip {
-  border-radius: 8px;
-  padding: 15px;
   background-color: #131822;
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
 }
 
 tooltip label {
