@@ -11,13 +11,12 @@
     "metrics": false,
     "diagnostics": false
   },
-  "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "autosave": "on_focus_change",
   "theme": {
     "mode": "dark",
-    "dark": "Catppuccin Macchiato",
+    "dark": "Ayu Dark",
     "light": "Ayu Light"
   },
   "ui_font_family": "Fira Code",

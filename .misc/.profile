@@ -31,10 +31,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-# source bash_aliases file
-[ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
-[ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
-
 # if running bash
 if [ -n "${BASH_VERSION}" ]; then
     export IM_BASHRC
@@ -46,3 +42,8 @@ elif [ -n "${ZSH_VERSION}" ]; then
 fi
 
 eval "$(ssh-agent -s)" > /dev/null
+eval "$(zoxide init ${SHELL##*/})"
+
+# source bash_aliases file
+[ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
+[ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
