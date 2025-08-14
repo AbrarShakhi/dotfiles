@@ -12,6 +12,5 @@
 # Directory that I WANT direct symb-link
 [ -d ~/bin ] && rm -rf ~/bin
 [ -d ~/.misc ] && rm -rf ~/.misc
-[ -d ~/quickcode ] && rm -rf ~/quickcode
 
 stow .

@@ -1,0 +1,8 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+shift+enter",
+    "command": "notebook.cell.insertCodeCellBelow",
+    "when": "notebookCellListFocused && !inputFocus && notebookChatOuterFocusPosition == ''"
+  }
+]
