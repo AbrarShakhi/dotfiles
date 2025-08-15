@@ -63,7 +63,8 @@
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "custom/power"
   ],
   "cpu": {
     "interval": 5,
@@ -135,5 +136,10 @@
   "tray": {
     "icon-size": 12,
     "spacing": 12
+  },
+  "custom/power": {
+    "format": "󰤆",
+    "tooltip": false,
+    "on-click": "wlogout"
   }
 }

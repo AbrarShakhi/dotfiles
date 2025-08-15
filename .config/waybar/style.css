@@ -42,6 +42,7 @@
 #bluetooth,
 #pulseaudio,
 #clock,
+#custom-power,
 #custom-notification {
   min-width: 12px;
   margin: 0 7.5px;
