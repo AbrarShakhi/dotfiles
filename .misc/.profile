@@ -44,6 +44,8 @@ fi
 eval "$(ssh-agent -s)" > /dev/null
 eval "$(zoxide init ${SHELL##*/})"
 
+export YAY_USE_CURL=1
+
 # source bash_aliases file
 [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
 [ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
