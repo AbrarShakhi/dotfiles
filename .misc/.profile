@@ -48,4 +48,6 @@ export YAY_USE_CURL=1
 
 # source bash_aliases file
 [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
+[ -e "${ZDOTDIR}/functions.sh" ] && source "${ZDOTDIR}/functions.sh"
+
 [ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
