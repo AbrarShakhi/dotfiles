@@ -4,29 +4,47 @@
 }
 
 window {
-  background-color: rgba(12, 12, 12, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 button {
-  border-radius: 12px;
+  border-radius: 0px;
   border-color: black;
   text-decoration-color: #ffffff;
   color: #ffffff;
   background-color: #1e1e1e;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25%;
+  background-size: 20%;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 button:focus,
 button:active,
 button:hover {
-  background-color: #3700b3;
+  background-color: #7ec087;
   outline-style: none;
   box-shadow: 0 0 10px 2px #3700b380;
+  background-size: 22%;
+}
+
+button:focus {
+  background-color: #8c7ec0;
+}
+
+#lock {
+  border-top-left-radius: 20px;
+}
+#suspend {
+  border-top-right-radius: 20px;
+}
+#hibernate {
+  border-bottom-left-radius: 20px;
+}
+#reboot {
+  border-bottom-right-radius: 20px;
 }
 
 #lock {
