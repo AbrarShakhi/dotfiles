@@ -1,7 +1,7 @@
 #!/bin/bash
 
-packages=("ghostty" "zsh" "stow" "tmux" "swaync" "nvim")
-hypr_packages=("hyprland" "hyprlock" "hypridle" "waybar" "swww" "rofi" "wl-clip-persist" "swaync" "nautilus" "pamixer" "playerctl" "wlogout" "nwg-look")
+packages=("ghostty" "zsh" "stow" "tmux" "swaync" "nvim" "zoxide")
+hypr_packages=("hyprland" "hyprlock" "hypridle" "waybar" "swww" "fuzzel" "wl-clip-persist" "swaync" "nautilus" "pamixer" "playerctl" "wlogout" "nwg-look")
 
 install_or_yay() {
   local pkg=$1
