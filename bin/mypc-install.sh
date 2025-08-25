@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-packages=("ghostty" "zsh" "stow" "tmux" "swaync" "nvim" "zoxide" "bat" "lsd")
+packages=("ghostty" "zsh" "fzf" "stow" "tmux" "swaync" "nvim" "zoxide" "bat" "lsd")
 hypr_packages=("hyprland" "hyprlock" "hypridle" "waybar" "swww" "fuzzel" "wl-clip-persist" "swaync" "nautilus" "pamixer" "playerctl" "wlogout" "nwg-look" "impala")
 
 install_or_yay() {
