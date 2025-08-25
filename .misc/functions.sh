@@ -29,21 +29,19 @@ sd() {
 
 git() {
   if [ -z "$GITHUB_KEY" ] || [ ! -f "$GITHUB_KEY" ]; then
-    while :; do
-      if command -v fzf > /dev/null 2>&1; then
-        input_key=$(find ~/.ssh -type f | fzf --height=40% --layout=reverse --prompt='Select your GitHub SSH key: ' --color=fg:#c0caf5,bg:#1e1e2e,hl:#7aa2f7,fg+:#ffffff,bg+:#3b4261,hl+:#7dcfff)
-      else
-        echo -n "Enter path to your GitHub SSH key: "
-        read input_key
-      fi
-      input_key="${input_key/#\~/$HOME}"
-      if [ -f "$input_key" ]; then
-        export GITHUB_KEY="$input_key"
-        break
-      else
-        echo "File does not exist at: $input_key"
-      fi
-    done
+    if command -v fzf > /dev/null 2>&1; then
+      input_key=$(find ~/.ssh -type f | fzf --height=40% --layout=reverse --prompt='Select your GitHub SSH key: ' --color=fg:#c0caf5,bg:#1e1e2e,hl:#7aa2f7,fg+:#ffffff,bg+:#3b4261,hl+:#7dcfff)
+    else
+      echo -n "Enter path to your GitHub SSH key: "
+      read input_key
+    fi
+    input_key="${input_key/#\~/$HOME}"
+    if [ -f "$input_key" ]; then
+      export GITHUB_KEY="$input_key"
+    else
+      echo "File does not exist at: $input_key"
+      exit 1
+    fi
   fi
 
   if [ -z "$SSH_AUTH_SOCK" ] || ! ssh-add -l > /dev/null 2>&1; then
