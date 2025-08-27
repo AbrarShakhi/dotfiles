@@ -45,9 +45,8 @@ export YAY_USE_CURL=1
 
 # source bash_aliases file
 [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
-[ -e "${ZDOTDIR}/functions.sh" ] && source "${ZDOTDIR}/functions.sh"
 
-[ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
+[ -e "${ZDOTDIR}/functions.sh" ] && source "${ZDOTDIR}/functions.sh"
 
 if is_exists "ssh-agent" && [ "$OS" != "Windows_NT" ]; then
     eval "$(ssh-agent -s)" > /dev/null
@@ -55,4 +54,6 @@ fi
 if is_exists "zoxide"; then
     eval "$(zoxide init ${SHELL##*/})"
 fi
+
+[ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
 

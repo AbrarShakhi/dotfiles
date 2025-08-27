@@ -1,8 +1,7 @@
 {
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
-  "editor.fontFamily": "'VictorMono Nerd Font Propo', 'Droid Sans Mono', 'monospace', monospace",
-  "editor.formatOnSave": true,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
   "editor.tabSize": 4,
   "editor.indentSize": "tabSize",
   "terminal.integrated.defaultProfile.linux": "zsh",
@@ -10,42 +9,9 @@
   "editor.minimap.renderCharacters": false,
   "files.autoSave": "onFocusChange",
   "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.suggest.insertMode": "replace"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "file:/**/*.csv": "jupyter-data-wrangler"
-  },
   "workbench.sideBar.location": "right",
-  "dineug.erd-editor.theme.appearance": "dark",
-  "dineug.erd-editor.theme.grayColor": "sand",
-  "dineug.erd-editor.theme.accentColor": "crimson",
-  "git.confirmSync": false,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.diagnosticsSource": "Pyright",
@@ -53,8 +19,5 @@
   "python.analysis.aiCodeActions": {
     "implementAbstractClasses": true
   },
-  "python.analysis.diagnosticMode": "workspace",
   "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.languageServerMode": "full",
-  "python.analysis.typeCheckingMode": "standard"
 }
