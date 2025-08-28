@@ -49,7 +49,7 @@ export YAY_USE_CURL=1
 
 [ -e "${ZDOTDIR}/.bash_aliases" ] && source "${ZDOTDIR}/.bash_aliases"
 
-if is_exists "ssh-agent" && [ "$OS" != "Windows_NT" ]; then
+if is_exists "ssh-agent" && [ "$OS" != "Windows_NT" ] && [ -n "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)" > /dev/null
 fi
 if is_exists "zoxide"; then
