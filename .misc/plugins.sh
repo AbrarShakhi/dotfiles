@@ -37,4 +37,9 @@ if [ -d $CARGO_HOME ]; then
 . "$CARGO_HOME/env"
 fi
 
-
+# Flutter
+FLUTTER_DIR="$DOT_PLUGIN_HOME/flutter"
+if [ -d $FLUTTER_DIR ]; then
+    export FLUTTER_DIR
+    export PATH="$PATH:$FLUTTER_DIR/bin"
+fi

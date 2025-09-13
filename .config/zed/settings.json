@@ -16,7 +16,7 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "dark",
-    "dark": "Ayu Dark",
+    "dark": "One Dark",
     "light": "Ayu Light"
   },
   "ui_font_family": "Fira Code",
