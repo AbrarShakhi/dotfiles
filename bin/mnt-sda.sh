@@ -2,13 +2,23 @@
 
 LOCA="/run/media/$USER"
 
-# Check if USER is set, $1 is provided, and the directory $LOCA exists
-if [ -n "$USER" ] && [ -n "$1" ] && [ -d "$LOCA" ] && [ ! -d "$LOCA/$1" ]; then
-    echo "making dir in: $LOCA/$1"
+show_error() {
+    echo "(Safely Aborted) Error:"
+    [ -z "$USER" ] && echo " - USER is not set."
+    [ -z "$1" ] && echo " - Missing argument for device (e.g., sdb1)."
+    [ ! -d "$LOCA" ] && echo " - Mount base directory '$LOCA' does not exist."
+    [ -d "$LOCA/$1" ] && echo " - Target directory '$LOCA/$1' already exists."
+    [ ! -b "/dev/$1" ] && echo " - Device '/dev/$1' does not exist or is not a valid block device."
+    [ ! -w "$LOCA" ] && echo " - Mount point '$LOCA' is not writable."
+    exit 1
+}
+
+if [ -n "$USER" ] && [ -n "$1" ] && [ -d "$LOCA" ] && [ ! -d "$LOCA/$1" ] && [ -b "/dev/$1" ] && [ -w "$LOCA" ] && ! mount | grep -q "/dev/$1"; then
+    echo "Making dir in: $LOCA/$1"
     sudo mkdir -p "$LOCA/$1"
-    echo "mounting /dev/$1 to $LOCA/$1"
+    echo "Mounting /dev/$1 to $LOCA/$1"
     sudo mount "/dev/$1" "$LOCA/$1"
 else
-    echo "(Safely Aborted) Error: USER is not set or argument is missing or directory $LOCA does not exist."
-    exit 1
+    show_error "$1"
 fi
+
