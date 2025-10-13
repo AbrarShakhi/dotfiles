@@ -50,3 +50,6 @@ if [ -d $ASTUDIO_DIR ]; then
     export PATH="$PATH:$ASTUDIO_DIR/emulator"
     export PATH="$PATH:$ASTUDIO_DIR/platform-tools"
 fi
+
+# Yay
+export YAY_USE_CURL=1
