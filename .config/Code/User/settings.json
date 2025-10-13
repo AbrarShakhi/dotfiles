@@ -1,0 +1,21 @@
+{
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.tabSize": 4,
+  "editor.indentSize": "tabSize",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.renderCharacters": false,
+  "files.autoSave": "onFocusChange",
+  "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
+  "workbench.colorTheme": "Sonokai Shusia",
+  "workbench.sideBar.location": "right",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.diagnosticsSource": "Pyright",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.aiCodeActions": {
+    "implementAbstractClasses": true
+  }
+}

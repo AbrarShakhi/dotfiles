@@ -1,0 +1,24 @@
+{
+  "disable_ai": true,
+  "minimap": {
+    "show": "auto"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "autosave": "on_focus_change",
+  "theme": {
+    "mode": "dark",
+    "dark": "Ayu Dark",
+    "light": "Ayu Light"
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono"
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "alt+m",
+    "command": "workbench.action.focusPanel",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+m",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+f m",
+    "command": "editor.action.formatDocument.multiple"
+  }
+]
