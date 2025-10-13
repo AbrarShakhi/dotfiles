@@ -6,9 +6,7 @@ if ! command -v stow >/dev/null 2>&1; then
     exit 1
 fi
 
-
 git submodule update --init --recursive
-
 
 echo "Stow is installed. Proceeding with setup..."
 
