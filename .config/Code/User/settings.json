@@ -17,5 +17,7 @@
   "python.analysis.autoFormatStrings": true,
   "python.analysis.aiCodeActions": {
     "implementAbstractClasses": true
-  }
+  },
+  "workbench.startupEditor": "none",
+  "chat.agent.enabled": false
 }

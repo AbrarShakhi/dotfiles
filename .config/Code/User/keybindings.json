@@ -19,7 +19,7 @@
     "when": "panelFocus"
   },
   {
-    "key": "ctrl+f m",
+    "key": "ctrl+alt+f m",
     "command": "editor.action.formatDocument.multiple"
   }
 ]

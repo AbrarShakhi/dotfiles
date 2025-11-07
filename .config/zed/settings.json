@@ -1,4 +1,11 @@
 {
+  "terminal": {
+    "shell": {
+      "program": "fish"
+    },
+    "dock": "right"
+  },
+  "icon_theme": "Catppuccin Macchiato",
   "disable_ai": true,
   "minimap": {
     "show": "auto"

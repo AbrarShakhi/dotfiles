@@ -26,16 +26,8 @@ else
     exit 0
 fi
 
-if command -v starship > /dev/null; then
-    eval "$(starship init $MYSHELL)"
-fi
-
 [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
 
 if command -v "ssh-agent" > /dev/null && [ "$OS" != "Windows_NT" ] && [ -n "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)" > /dev/null
-fi
-
-if command -v zoxide > /dev/null; then
-    eval "$(zoxide init "${MYSHELL}")"
 fi

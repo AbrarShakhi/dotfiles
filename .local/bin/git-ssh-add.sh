@@ -9,7 +9,9 @@ fi
 
 # Check if ssh-agent is running in this shell
 if [ -z "$SSH_AUTH_SOCK" ]; then
-  echo "❌ No ssh-agent running. Please run: eval \"\$(ssh-agent -s)\""
+  echo 'No ssh-agent is running in this shell.' >&2
+  echo "Run the agent:" >&2
+  echo '    eval "$(ssh-agent -s)"'
   exit 1
 fi
 
@@ -46,4 +48,3 @@ else
   echo "❌ Failed to add SSH key."
   exit 1
 fi
-
