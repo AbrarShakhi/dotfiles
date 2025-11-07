@@ -4,7 +4,7 @@
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
   "editor.tabSize": 4,
   "editor.indentSize": "tabSize",
-  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.linux": "fish",
   "editor.minimap.autohide": "mouseover",
   "editor.minimap.renderCharacters": false,
   "files.autoSave": "onFocusChange",
