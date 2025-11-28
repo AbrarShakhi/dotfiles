@@ -1,1 +1,1 @@
-../../.misc/.profile
+.profile

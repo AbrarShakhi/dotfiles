@@ -1,1 +1,1 @@
-.zshenv
+.profile
