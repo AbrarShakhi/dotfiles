@@ -9,7 +9,6 @@
   "editor.minimap.renderCharacters": false,
   "files.autoSave": "onFocusChange",
   "rust-analyzer.semanticHighlighting.nonStandardTokens": false,
-  "workbench.colorTheme": "Sonokai Shusia",
   "workbench.sideBar.location": "right",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
@@ -19,5 +18,8 @@
     "implementAbstractClasses": true
   },
   "workbench.startupEditor": "none",
-  "chat.agent.enabled": false
+  "chat.agent.enabled": false,
+  "update.showReleaseNotes": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "redhat.telemetry.enabled": false
 }
